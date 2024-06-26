@@ -1,4 +1,5 @@
 import { Appointments } from "../appointments/Appointments";
+import { Decimal } from "decimal.js";
 
 export type Properties = {
   address: string | null;
@@ -6,6 +7,7 @@ export type Properties = {
   createdAt: Date;
   id: string;
   name: string | null;
+  numberOfRooms: Decimal;
   price: number | null;
   status?: "Option1" | null;
   updatedAt: Date;

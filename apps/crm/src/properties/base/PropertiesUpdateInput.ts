@@ -9,7 +9,7 @@ https://docs.amplication.com/how-to/custom-code
 
 ------------------------------------------------------------------------------
   */
-import { InputType, Field } from "@nestjs/graphql";
+import { InputType, Field, Float } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 
 import {
@@ -25,6 +25,7 @@ import {
 
 import { AppointmentsUpdateManyWithoutPropertiesItemsInput } from "./AppointmentsUpdateManyWithoutPropertiesItemsInput";
 import { Type } from "class-transformer";
+import { Decimal } from "decimal.js";
 import { EnumPropertiesStatus } from "./EnumPropertiesStatus";
 
 @InputType()
@@ -64,6 +65,19 @@ class PropertiesUpdateInput {
     nullable: true,
   })
   name?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @Min(-1)
+  @Max(99999999999)
+  @IsOptional()
+  @Field(() => Float, {
+    nullable: true,
+  })
+  numberOfRooms?: Decimal;
 
   @ApiProperty({
     required: false,

@@ -16,6 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional, ValidateNested, IsEnum } from "class-validator";
 import { AppointmentsListRelationFilter } from "../../appointments/base/AppointmentsListRelationFilter";
 import { StringFilter } from "../../util/StringFilter";
+import { DecimalFilter } from "../../util/DecimalFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { EnumPropertiesStatus } from "./EnumPropertiesStatus";
 
@@ -65,6 +66,17 @@ class PropertiesWhereInput {
     nullable: true,
   })
   name?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DecimalFilter,
+  })
+  @Type(() => DecimalFilter)
+  @IsOptional()
+  @Field(() => DecimalFilter, {
+    nullable: true,
+  })
+  numberOfRooms?: DecimalFilter;
 
   @ApiProperty({
     required: false,
