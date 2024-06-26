@@ -27,6 +27,7 @@ export const PropertiesEdit = (props: EditProps): React.ReactElement => {
           <SelectArrayInput optionText={AppointmentsTitle} />
         </ReferenceArrayInput>
         <TextInput label="Name" source="name" />
+        <NumberInput label="Number of rooms" source="numberOfRooms" />
         <NumberInput label="Price" source="price" />
         <SelectInput
           source="status"

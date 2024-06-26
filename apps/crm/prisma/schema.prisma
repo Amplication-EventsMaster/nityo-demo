@@ -41,6 +41,18 @@ model Clients {
   updatedAt         DateTime       @updatedAt
 }
 
+model Properties {
+  address           String?
+  appointmentsItems Appointments[]
+  createdAt         DateTime              @default(now())
+  id                String                @id @default(cuid())
+  name              String?
+  numberOfRooms     Decimal
+  price             Float?
+  status            EnumPropertiesStatus?
+  updatedAt         DateTime              @updatedAt
+}
+
 model Appointments {
   agent      Agents?     @relation(fields: [agentId], references: [id])
   agentId    String?
@@ -53,17 +65,6 @@ model Appointments {
   property   Properties? @relation(fields: [propertyId], references: [id])
   propertyId String?
   updatedAt  DateTime    @updatedAt
-}
-
-model Properties {
-  address           String?
-  appointmentsItems Appointments[]
-  createdAt         DateTime              @default(now())
-  id                String                @id @default(cuid())
-  name              String?
-  price             Float?
-  status            EnumPropertiesStatus?
-  updatedAt         DateTime              @updatedAt
 }
 
 enum EnumPropertiesStatus {

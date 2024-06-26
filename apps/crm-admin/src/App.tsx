@@ -17,14 +17,14 @@ import { ClientsList } from "./clients/ClientsList";
 import { ClientsCreate } from "./clients/ClientsCreate";
 import { ClientsEdit } from "./clients/ClientsEdit";
 import { ClientsShow } from "./clients/ClientsShow";
-import { AppointmentsList } from "./appointments/AppointmentsList";
-import { AppointmentsCreate } from "./appointments/AppointmentsCreate";
-import { AppointmentsEdit } from "./appointments/AppointmentsEdit";
-import { AppointmentsShow } from "./appointments/AppointmentsShow";
 import { PropertiesList } from "./properties/PropertiesList";
 import { PropertiesCreate } from "./properties/PropertiesCreate";
 import { PropertiesEdit } from "./properties/PropertiesEdit";
 import { PropertiesShow } from "./properties/PropertiesShow";
+import { AppointmentsList } from "./appointments/AppointmentsList";
+import { AppointmentsCreate } from "./appointments/AppointmentsCreate";
+import { AppointmentsEdit } from "./appointments/AppointmentsEdit";
+import { AppointmentsShow } from "./appointments/AppointmentsShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -73,18 +73,18 @@ const App = (): React.ReactElement => {
           show={ClientsShow}
         />
         <Resource
-          name="Appointments"
-          list={AppointmentsList}
-          edit={AppointmentsEdit}
-          create={AppointmentsCreate}
-          show={AppointmentsShow}
-        />
-        <Resource
           name="Properties"
           list={PropertiesList}
           edit={PropertiesEdit}
           create={PropertiesCreate}
           show={PropertiesShow}
+        />
+        <Resource
+          name="Appointments"
+          list={AppointmentsList}
+          edit={AppointmentsEdit}
+          create={AppointmentsCreate}
+          show={AppointmentsShow}
         />
       </Admin>
     </div>

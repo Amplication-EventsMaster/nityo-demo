@@ -16,6 +16,7 @@ export const PropertiesList = (props: ListProps): React.ReactElement => {
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
         <TextField label="Name" source="name" />
+        <TextField label="Number of rooms" source="numberOfRooms" />
         <TextField label="Price" source="price" />
         <TextField label="Status" source="status" />
         <DateField source="updatedAt" label="Updated At" />

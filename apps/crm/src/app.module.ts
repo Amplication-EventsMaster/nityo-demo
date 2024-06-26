@@ -2,8 +2,8 @@ import { Module } from "@nestjs/common";
 import { UserModule } from "./user/user.module";
 import { AgentsModule } from "./agents/agents.module";
 import { ClientsModule } from "./clients/clients.module";
-import { AppointmentsModule } from "./appointments/appointments.module";
 import { PropertiesModule } from "./properties/properties.module";
+import { AppointmentsModule } from "./appointments/appointments.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -24,8 +24,8 @@ import { AuthModule } from "./auth/auth.module";
     UserModule,
     AgentsModule,
     ClientsModule,
-    AppointmentsModule,
     PropertiesModule,
+    AppointmentsModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,

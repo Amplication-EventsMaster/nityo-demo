@@ -91,61 +91,61 @@
   },
   {
     "role": "user",
-    "resource": "Appointments",
+    "resource": "Properties",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Appointments",
+    "resource": "Properties",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Appointments",
+    "resource": "Properties",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Appointments",
+    "resource": "Properties",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Appointments",
+    "resource": "Properties",
     "action": "read:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Properties",
+    "resource": "Appointments",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Properties",
+    "resource": "Appointments",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Properties",
+    "resource": "Appointments",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Properties",
+    "resource": "Appointments",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Properties",
+    "resource": "Appointments",
     "action": "read:any",
     "attributes": "*"
   }
