@@ -50,15 +50,4 @@ export class PropertiesServiceBase {
   ): Promise<PrismaProperties> {
     return this.prisma.properties.delete(args);
   }
-
-  async findAppointmentsItems(
-    parentId: string,
-    args: Prisma.AppointmentsFindManyArgs
-  ): Promise<PrismaAppointments[]> {
-    return this.prisma.properties
-      .findUniqueOrThrow({
-        where: { id: parentId },
-      })
-      .appointmentsItems(args);
-  }
 }
